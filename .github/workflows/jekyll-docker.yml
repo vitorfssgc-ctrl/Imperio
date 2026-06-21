@@ -1,0 +1,20 @@
+Nome:  Site de joalheria CI
+
+Vamos.:
+  Empurra!  :
+  ramos  :  [ "principal" ]
+ pull_request :
+  ramos  :  [ "principal" ]
+
+Empregos:
+ Construir  :
+
+  Corrida  :  Ubuntu-último
+
+  Passos  :
+     -  Usos:  Ações/checkout@v4
+     -  Nome:  Construa o site no recipiente Jekyll/Builder.
+  Corra!  :  |
+ Docker correr 
+ -V ${{ github.workspace }:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \ {{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+ jekyll/builder: mais recente /bin/bash -c "chmod -R 777 /srv/jekyll & & jekyll build --futuro" "chmod -R 777 /srv/jekyll && jekyll build --future"
